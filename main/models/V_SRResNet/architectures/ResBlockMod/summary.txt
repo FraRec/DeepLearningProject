@@ -1,0 +1,266 @@
+Model: "SRResNet_ResBlockMod"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_4 (InputLayer)        [(None, None, None, 3)]      0         []                            
+                                                                                                  
+ lambda_18 (Lambda)          (None, None, None, 3)        0         ['input_4[0][0]']             
+                                                                                                  
+ conv2d_149 (Conv2D)         (None, None, None, 64)       15616     ['lambda_18[0][0]']           
+                                                                                                  
+ first_prelu (PReLU)         (None, None, None, 64)       64        ['conv2d_149[0][0]']          
+                                                                                                  
+ conv2d_150 (Conv2D)         (None, None, None, 64)       36928     ['first_prelu[0][0]']         
+                                                                                                  
+ batch_normalization_103 (B  (None, None, None, 64)       256       ['conv2d_150[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_74 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_103[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_151 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_74[0][0]']          
+                                                                                                  
+ batch_normalization_104 (B  (None, None, None, 64)       256       ['conv2d_151[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_64 (Add)                (None, None, None, 64)       0         ['first_prelu[0][0]',         
+                                                                     'batch_normalization_104[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_152 (Conv2D)         (None, None, None, 64)       36928     ['add_64[0][0]']              
+                                                                                                  
+ batch_normalization_105 (B  (None, None, None, 64)       256       ['conv2d_152[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_75 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_105[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_153 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_75[0][0]']          
+                                                                                                  
+ batch_normalization_106 (B  (None, None, None, 64)       256       ['conv2d_153[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_65 (Add)                (None, None, None, 64)       0         ['add_64[0][0]',              
+                                                                     'batch_normalization_106[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_154 (Conv2D)         (None, None, None, 64)       36928     ['add_65[0][0]']              
+                                                                                                  
+ batch_normalization_107 (B  (None, None, None, 64)       256       ['conv2d_154[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_76 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_107[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_155 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_76[0][0]']          
+                                                                                                  
+ batch_normalization_108 (B  (None, None, None, 64)       256       ['conv2d_155[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_66 (Add)                (None, None, None, 64)       0         ['add_65[0][0]',              
+                                                                     'batch_normalization_108[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_156 (Conv2D)         (None, None, None, 64)       36928     ['add_66[0][0]']              
+                                                                                                  
+ batch_normalization_109 (B  (None, None, None, 64)       256       ['conv2d_156[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_77 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_109[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_157 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_77[0][0]']          
+                                                                                                  
+ batch_normalization_110 (B  (None, None, None, 64)       256       ['conv2d_157[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_67 (Add)                (None, None, None, 64)       0         ['add_66[0][0]',              
+                                                                     'batch_normalization_110[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_158 (Conv2D)         (None, None, None, 64)       36928     ['add_67[0][0]']              
+                                                                                                  
+ batch_normalization_111 (B  (None, None, None, 64)       256       ['conv2d_158[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_78 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_111[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_159 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_78[0][0]']          
+                                                                                                  
+ batch_normalization_112 (B  (None, None, None, 64)       256       ['conv2d_159[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_68 (Add)                (None, None, None, 64)       0         ['add_67[0][0]',              
+                                                                     'batch_normalization_112[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_160 (Conv2D)         (None, None, None, 64)       36928     ['add_68[0][0]']              
+                                                                                                  
+ batch_normalization_113 (B  (None, None, None, 64)       256       ['conv2d_160[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_79 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_113[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_161 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_79[0][0]']          
+                                                                                                  
+ batch_normalization_114 (B  (None, None, None, 64)       256       ['conv2d_161[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_69 (Add)                (None, None, None, 64)       0         ['add_68[0][0]',              
+                                                                     'batch_normalization_114[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_162 (Conv2D)         (None, None, None, 64)       36928     ['add_69[0][0]']              
+                                                                                                  
+ batch_normalization_115 (B  (None, None, None, 64)       256       ['conv2d_162[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_80 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_115[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_163 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_80[0][0]']          
+                                                                                                  
+ batch_normalization_116 (B  (None, None, None, 64)       256       ['conv2d_163[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_70 (Add)                (None, None, None, 64)       0         ['add_69[0][0]',              
+                                                                     'batch_normalization_116[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_164 (Conv2D)         (None, None, None, 64)       36928     ['add_70[0][0]']              
+                                                                                                  
+ batch_normalization_117 (B  (None, None, None, 64)       256       ['conv2d_164[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_81 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_117[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_165 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_81[0][0]']          
+                                                                                                  
+ batch_normalization_118 (B  (None, None, None, 64)       256       ['conv2d_165[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ add_71 (Add)                (None, None, None, 64)       0         ['add_70[0][0]',              
+                                                                     'batch_normalization_118[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_166 (Conv2D)         (None, None, None, 64)       36928     ['add_71[0][0]']              
+                                                                                                  
+ batch_normalization_119 (B  (None, None, None, 64)       256       ['conv2d_166[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ p_re_lu_82 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_119[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_167 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_82[0][0]']          
+                                                                                                  
+ batch_normalization_120 (B  (None, None, None, 64)       256       ['conv2d_167[0][0]']          
+ atchNormalization)                                                                               
+                                                                                                  
+ last_base_res_block (Add)   (None, None, None, 64)       0         ['add_71[0][0]',              
+                                                                     'batch_normalization_120[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_262 (Conv2D)         (None, None, None, 64)       36928     ['last_base_res_block[0][0]'] 
+                                                                                                  
+ p_re_lu_132 (PReLU)         (None, None, None, 64)       64        ['conv2d_262[0][0]']          
+                                                                                                  
+ conv2d_263 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_132[0][0]']         
+                                                                                                  
+ add_112 (Add)               (None, None, None, 64)       0         ['last_base_res_block[0][0]', 
+                                                                     'conv2d_263[0][0]']          
+                                                                                                  
+ conv2d_264 (Conv2D)         (None, None, None, 64)       36928     ['add_112[0][0]']             
+                                                                                                  
+ p_re_lu_133 (PReLU)         (None, None, None, 64)       64        ['conv2d_264[0][0]']          
+                                                                                                  
+ conv2d_265 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_133[0][0]']         
+                                                                                                  
+ add_113 (Add)               (None, None, None, 64)       0         ['add_112[0][0]',             
+                                                                     'conv2d_265[0][0]']          
+                                                                                                  
+ conv2d_266 (Conv2D)         (None, None, None, 64)       36928     ['add_113[0][0]']             
+                                                                                                  
+ p_re_lu_134 (PReLU)         (None, None, None, 64)       64        ['conv2d_266[0][0]']          
+                                                                                                  
+ conv2d_267 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_134[0][0]']         
+                                                                                                  
+ add_114 (Add)               (None, None, None, 64)       0         ['add_113[0][0]',             
+                                                                     'conv2d_267[0][0]']          
+                                                                                                  
+ conv2d_268 (Conv2D)         (None, None, None, 64)       36928     ['add_114[0][0]']             
+                                                                                                  
+ p_re_lu_135 (PReLU)         (None, None, None, 64)       64        ['conv2d_268[0][0]']          
+                                                                                                  
+ conv2d_269 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_135[0][0]']         
+                                                                                                  
+ add_115 (Add)               (None, None, None, 64)       0         ['add_114[0][0]',             
+                                                                     'conv2d_269[0][0]']          
+                                                                                                  
+ conv2d_270 (Conv2D)         (None, None, None, 64)       36928     ['add_115[0][0]']             
+                                                                                                  
+ p_re_lu_136 (PReLU)         (None, None, None, 64)       64        ['conv2d_270[0][0]']          
+                                                                                                  
+ conv2d_271 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_136[0][0]']         
+                                                                                                  
+ add_116 (Add)               (None, None, None, 64)       0         ['add_115[0][0]',             
+                                                                     'conv2d_271[0][0]']          
+                                                                                                  
+ conv2d_272 (Conv2D)         (None, None, None, 64)       36928     ['add_116[0][0]']             
+                                                                                                  
+ p_re_lu_137 (PReLU)         (None, None, None, 64)       64        ['conv2d_272[0][0]']          
+                                                                                                  
+ conv2d_273 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_137[0][0]']         
+                                                                                                  
+ add_117 (Add)               (None, None, None, 64)       0         ['add_116[0][0]',             
+                                                                     'conv2d_273[0][0]']          
+                                                                                                  
+ conv2d_274 (Conv2D)         (None, None, None, 64)       36928     ['add_117[0][0]']             
+                                                                                                  
+ p_re_lu_138 (PReLU)         (None, None, None, 64)       64        ['conv2d_274[0][0]']          
+                                                                                                  
+ conv2d_275 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_138[0][0]']         
+                                                                                                  
+ add_118 (Add)               (None, None, None, 64)       0         ['add_117[0][0]',             
+                                                                     'conv2d_275[0][0]']          
+                                                                                                  
+ conv2d_276 (Conv2D)         (None, None, None, 64)       36928     ['add_118[0][0]']             
+                                                                                                  
+ p_re_lu_139 (PReLU)         (None, None, None, 64)       64        ['conv2d_276[0][0]']          
+                                                                                                  
+ conv2d_277 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_139[0][0]']         
+                                                                                                  
+ add_119 (Add)               (None, None, None, 64)       0         ['add_118[0][0]',             
+                                                                     'conv2d_277[0][0]']          
+                                                                                                  
+ batch_normalization_140 (B  (None, None, None, 64)       256       ['add_119[0][0]']             
+ atchNormalization)                                                                               
+                                                                                                  
+ add_new (Add)               (None, None, None, 64)       0         ['first_prelu[0][0]',         
+                                                                     'batch_normalization_140[0][0
+                                                                    ]']                           
+                                                                                                  
+ conv2d_278 (Conv2D)         (None, None, None, 256)      147712    ['add_new[0][0]']             
+                                                                                                  
+ lambda_34 (Lambda)          (None, None, None, 64)       0         ['conv2d_278[0][0]']          
+                                                                                                  
+ p_re_lu_140 (PReLU)         (None, None, None, 64)       64        ['lambda_34[0][0]']           
+                                                                                                  
+ conv2d_279 (Conv2D)         (None, None, None, 256)      147712    ['p_re_lu_140[0][0]']         
+                                                                                                  
+ lambda_35 (Lambda)          (None, None, None, 64)       0         ['conv2d_279[0][0]']          
+                                                                                                  
+ p_re_lu_141 (PReLU)         (None, None, None, 64)       64        ['lambda_35[0][0]']           
+                                                                                                  
+ conv2d_280 (Conv2D)         (None, None, None, 3)        15555     ['p_re_lu_141[0][0]']         
+                                                                                                  
+ lambda_36 (Lambda)          (None, None, None, 3)        0         ['conv2d_280[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 1588291 (6.06 MB)
+Trainable params: 902595 (3.44 MB)
+Non-trainable params: 685696 (2.62 MB)
+__________________________________________________________________________________________________
+dot: graph is too large for cairo-renderer bitmaps. Scaling by 0.681326 to fit

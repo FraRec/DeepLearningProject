@@ -1,0 +1,364 @@
+Model: "SRResNet_DenseBlock"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_2 (InputLayer)        [(None, None, None, 3)]      0         []                            
+                                                                                                  
+ lambda_7 (Lambda)           (None, None, None, 3)        0         ['input_2[0][0]']             
+                                                                                                  
+ conv2d_70 (Conv2D)          (None, None, None, 64)       15616     ['lambda_7[0][0]']            
+                                                                                                  
+ first_prelu (PReLU)         (None, None, None, 64)       64        ['conv2d_70[0][0]']           
+                                                                                                  
+ conv2d_71 (Conv2D)          (None, None, None, 64)       36928     ['first_prelu[0][0]']         
+                                                                                                  
+ batch_normalization_34 (Ba  (None, None, None, 64)       256       ['conv2d_71[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_21 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_34[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_72 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_21[0][0]']          
+                                                                                                  
+ batch_normalization_35 (Ba  (None, None, None, 64)       256       ['conv2d_72[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_24 (Add)                (None, None, None, 64)       0         ['first_prelu[0][0]',         
+                                                                     'batch_normalization_35[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_73 (Conv2D)          (None, None, None, 64)       36928     ['add_24[0][0]']              
+                                                                                                  
+ batch_normalization_36 (Ba  (None, None, None, 64)       256       ['conv2d_73[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_22 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_36[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_74 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_22[0][0]']          
+                                                                                                  
+ batch_normalization_37 (Ba  (None, None, None, 64)       256       ['conv2d_74[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_25 (Add)                (None, None, None, 64)       0         ['add_24[0][0]',              
+                                                                     'batch_normalization_37[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_75 (Conv2D)          (None, None, None, 64)       36928     ['add_25[0][0]']              
+                                                                                                  
+ batch_normalization_38 (Ba  (None, None, None, 64)       256       ['conv2d_75[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_23 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_38[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_76 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_23[0][0]']          
+                                                                                                  
+ batch_normalization_39 (Ba  (None, None, None, 64)       256       ['conv2d_76[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_26 (Add)                (None, None, None, 64)       0         ['add_25[0][0]',              
+                                                                     'batch_normalization_39[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_77 (Conv2D)          (None, None, None, 64)       36928     ['add_26[0][0]']              
+                                                                                                  
+ batch_normalization_40 (Ba  (None, None, None, 64)       256       ['conv2d_77[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_24 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_40[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_78 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_24[0][0]']          
+                                                                                                  
+ batch_normalization_41 (Ba  (None, None, None, 64)       256       ['conv2d_78[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_27 (Add)                (None, None, None, 64)       0         ['add_26[0][0]',              
+                                                                     'batch_normalization_41[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_79 (Conv2D)          (None, None, None, 64)       36928     ['add_27[0][0]']              
+                                                                                                  
+ batch_normalization_42 (Ba  (None, None, None, 64)       256       ['conv2d_79[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_25 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_42[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_80 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_25[0][0]']          
+                                                                                                  
+ batch_normalization_43 (Ba  (None, None, None, 64)       256       ['conv2d_80[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_28 (Add)                (None, None, None, 64)       0         ['add_27[0][0]',              
+                                                                     'batch_normalization_43[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_81 (Conv2D)          (None, None, None, 64)       36928     ['add_28[0][0]']              
+                                                                                                  
+ batch_normalization_44 (Ba  (None, None, None, 64)       256       ['conv2d_81[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_26 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_44[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_82 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_26[0][0]']          
+                                                                                                  
+ batch_normalization_45 (Ba  (None, None, None, 64)       256       ['conv2d_82[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_29 (Add)                (None, None, None, 64)       0         ['add_28[0][0]',              
+                                                                     'batch_normalization_45[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_83 (Conv2D)          (None, None, None, 64)       36928     ['add_29[0][0]']              
+                                                                                                  
+ batch_normalization_46 (Ba  (None, None, None, 64)       256       ['conv2d_83[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_27 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_46[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_84 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_27[0][0]']          
+                                                                                                  
+ batch_normalization_47 (Ba  (None, None, None, 64)       256       ['conv2d_84[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_30 (Add)                (None, None, None, 64)       0         ['add_29[0][0]',              
+                                                                     'batch_normalization_47[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_85 (Conv2D)          (None, None, None, 64)       36928     ['add_30[0][0]']              
+                                                                                                  
+ batch_normalization_48 (Ba  (None, None, None, 64)       256       ['conv2d_85[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_28 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_48[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_86 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_28[0][0]']          
+                                                                                                  
+ batch_normalization_49 (Ba  (None, None, None, 64)       256       ['conv2d_86[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ add_31 (Add)                (None, None, None, 64)       0         ['add_30[0][0]',              
+                                                                     'batch_normalization_49[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_87 (Conv2D)          (None, None, None, 64)       36928     ['add_31[0][0]']              
+                                                                                                  
+ batch_normalization_50 (Ba  (None, None, None, 64)       256       ['conv2d_87[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ p_re_lu_29 (PReLU)          (None, None, None, 64)       64        ['batch_normalization_50[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_88 (Conv2D)          (None, None, None, 64)       36928     ['p_re_lu_29[0][0]']          
+                                                                                                  
+ batch_normalization_51 (Ba  (None, None, None, 64)       256       ['conv2d_88[0][0]']           
+ tchNormalization)                                                                                
+                                                                                                  
+ last_base_res_block (Add)   (None, None, None, 64)       0         ['add_31[0][0]',              
+                                                                     'batch_normalization_51[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_239 (Conv2D)         (None, None, None, 64)       36928     ['last_base_res_block[0][0]'] 
+                                                                                                  
+ p_re_lu_51 (PReLU)          (None, None, None, 64)       64        ['conv2d_239[0][0]']          
+                                                                                                  
+ conv2d_240 (Conv2D)         (None, None, None, 64)       36928     ['p_re_lu_51[0][0]']          
+                                                                                                  
+ add_72 (Add)                (None, None, None, 64)       0         ['last_base_res_block[0][0]', 
+                                                                     'conv2d_240[0][0]']          
+                                                                                                  
+ conv2d_241 (Conv2D)         (None, None, None, 64)       36928     ['add_72[0][0]']              
+                                                                                                  
+ tf.concat_105 (TFOpLambda)  (None, None, None, 128)      0         ['add_72[0][0]',              
+                                                                     'conv2d_241[0][0]']          
+                                                                                                  
+ conv2d_242 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_105[0][0]']       
+                                                                                                  
+ tf.concat_106 (TFOpLambda)  (None, None, None, 192)      0         ['add_72[0][0]',              
+                                                                     'conv2d_241[0][0]',          
+                                                                     'conv2d_242[0][0]']          
+                                                                                                  
+ conv2d_243 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_106[0][0]']       
+                                                                                                  
+ tf.concat_107 (TFOpLambda)  (None, None, None, 256)      0         ['add_72[0][0]',              
+                                                                     'conv2d_241[0][0]',          
+                                                                     'conv2d_242[0][0]',          
+                                                                     'conv2d_243[0][0]']          
+                                                                                                  
+ conv2d_244 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_107[0][0]']       
+                                                                                                  
+ add_73 (Add)                (None, None, None, 64)       0         ['conv2d_244[0][0]',          
+                                                                     'add_72[0][0]']              
+                                                                                                  
+ conv2d_245 (Conv2D)         (None, None, None, 64)       36928     ['add_73[0][0]']              
+                                                                                                  
+ tf.concat_108 (TFOpLambda)  (None, None, None, 128)      0         ['add_73[0][0]',              
+                                                                     'conv2d_245[0][0]']          
+                                                                                                  
+ conv2d_246 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_108[0][0]']       
+                                                                                                  
+ tf.concat_109 (TFOpLambda)  (None, None, None, 192)      0         ['add_73[0][0]',              
+                                                                     'conv2d_245[0][0]',          
+                                                                     'conv2d_246[0][0]']          
+                                                                                                  
+ conv2d_247 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_109[0][0]']       
+                                                                                                  
+ tf.concat_110 (TFOpLambda)  (None, None, None, 256)      0         ['add_73[0][0]',              
+                                                                     'conv2d_245[0][0]',          
+                                                                     'conv2d_246[0][0]',          
+                                                                     'conv2d_247[0][0]']          
+                                                                                                  
+ conv2d_248 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_110[0][0]']       
+                                                                                                  
+ add_74 (Add)                (None, None, None, 64)       0         ['conv2d_248[0][0]',          
+                                                                     'add_73[0][0]']              
+                                                                                                  
+ conv2d_249 (Conv2D)         (None, None, None, 64)       36928     ['add_74[0][0]']              
+                                                                                                  
+ tf.concat_111 (TFOpLambda)  (None, None, None, 128)      0         ['add_74[0][0]',              
+                                                                     'conv2d_249[0][0]']          
+                                                                                                  
+ conv2d_250 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_111[0][0]']       
+                                                                                                  
+ tf.concat_112 (TFOpLambda)  (None, None, None, 192)      0         ['add_74[0][0]',              
+                                                                     'conv2d_249[0][0]',          
+                                                                     'conv2d_250[0][0]']          
+                                                                                                  
+ conv2d_251 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_112[0][0]']       
+                                                                                                  
+ tf.concat_113 (TFOpLambda)  (None, None, None, 256)      0         ['add_74[0][0]',              
+                                                                     'conv2d_249[0][0]',          
+                                                                     'conv2d_250[0][0]',          
+                                                                     'conv2d_251[0][0]']          
+                                                                                                  
+ conv2d_252 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_113[0][0]']       
+                                                                                                  
+ add_75 (Add)                (None, None, None, 64)       0         ['conv2d_252[0][0]',          
+                                                                     'add_74[0][0]']              
+                                                                                                  
+ conv2d_253 (Conv2D)         (None, None, None, 64)       36928     ['add_75[0][0]']              
+                                                                                                  
+ tf.concat_114 (TFOpLambda)  (None, None, None, 128)      0         ['add_75[0][0]',              
+                                                                     'conv2d_253[0][0]']          
+                                                                                                  
+ conv2d_254 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_114[0][0]']       
+                                                                                                  
+ tf.concat_115 (TFOpLambda)  (None, None, None, 192)      0         ['add_75[0][0]',              
+                                                                     'conv2d_253[0][0]',          
+                                                                     'conv2d_254[0][0]']          
+                                                                                                  
+ conv2d_255 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_115[0][0]']       
+                                                                                                  
+ tf.concat_116 (TFOpLambda)  (None, None, None, 256)      0         ['add_75[0][0]',              
+                                                                     'conv2d_253[0][0]',          
+                                                                     'conv2d_254[0][0]',          
+                                                                     'conv2d_255[0][0]']          
+                                                                                                  
+ conv2d_256 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_116[0][0]']       
+                                                                                                  
+ add_76 (Add)                (None, None, None, 64)       0         ['conv2d_256[0][0]',          
+                                                                     'add_75[0][0]']              
+                                                                                                  
+ conv2d_257 (Conv2D)         (None, None, None, 64)       36928     ['add_76[0][0]']              
+                                                                                                  
+ tf.concat_117 (TFOpLambda)  (None, None, None, 128)      0         ['add_76[0][0]',              
+                                                                     'conv2d_257[0][0]']          
+                                                                                                  
+ conv2d_258 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_117[0][0]']       
+                                                                                                  
+ tf.concat_118 (TFOpLambda)  (None, None, None, 192)      0         ['add_76[0][0]',              
+                                                                     'conv2d_257[0][0]',          
+                                                                     'conv2d_258[0][0]']          
+                                                                                                  
+ conv2d_259 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_118[0][0]']       
+                                                                                                  
+ tf.concat_119 (TFOpLambda)  (None, None, None, 256)      0         ['add_76[0][0]',              
+                                                                     'conv2d_257[0][0]',          
+                                                                     'conv2d_258[0][0]',          
+                                                                     'conv2d_259[0][0]']          
+                                                                                                  
+ conv2d_260 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_119[0][0]']       
+                                                                                                  
+ add_77 (Add)                (None, None, None, 64)       0         ['conv2d_260[0][0]',          
+                                                                     'add_76[0][0]']              
+                                                                                                  
+ conv2d_261 (Conv2D)         (None, None, None, 64)       36928     ['add_77[0][0]']              
+                                                                                                  
+ tf.concat_120 (TFOpLambda)  (None, None, None, 128)      0         ['add_77[0][0]',              
+                                                                     'conv2d_261[0][0]']          
+                                                                                                  
+ conv2d_262 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_120[0][0]']       
+                                                                                                  
+ tf.concat_121 (TFOpLambda)  (None, None, None, 192)      0         ['add_77[0][0]',              
+                                                                     'conv2d_261[0][0]',          
+                                                                     'conv2d_262[0][0]']          
+                                                                                                  
+ conv2d_263 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_121[0][0]']       
+                                                                                                  
+ tf.concat_122 (TFOpLambda)  (None, None, None, 256)      0         ['add_77[0][0]',              
+                                                                     'conv2d_261[0][0]',          
+                                                                     'conv2d_262[0][0]',          
+                                                                     'conv2d_263[0][0]']          
+                                                                                                  
+ conv2d_264 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_122[0][0]']       
+                                                                                                  
+ add_78 (Add)                (None, None, None, 64)       0         ['conv2d_264[0][0]',          
+                                                                     'add_77[0][0]']              
+                                                                                                  
+ conv2d_265 (Conv2D)         (None, None, None, 64)       36928     ['add_78[0][0]']              
+                                                                                                  
+ tf.concat_123 (TFOpLambda)  (None, None, None, 128)      0         ['add_78[0][0]',              
+                                                                     'conv2d_265[0][0]']          
+                                                                                                  
+ conv2d_266 (Conv2D)         (None, None, None, 64)       73792     ['tf.concat_123[0][0]']       
+                                                                                                  
+ tf.concat_124 (TFOpLambda)  (None, None, None, 192)      0         ['add_78[0][0]',              
+                                                                     'conv2d_265[0][0]',          
+                                                                     'conv2d_266[0][0]']          
+                                                                                                  
+ conv2d_267 (Conv2D)         (None, None, None, 64)       110656    ['tf.concat_124[0][0]']       
+                                                                                                  
+ tf.concat_125 (TFOpLambda)  (None, None, None, 256)      0         ['add_78[0][0]',              
+                                                                     'conv2d_265[0][0]',          
+                                                                     'conv2d_266[0][0]',          
+                                                                     'conv2d_267[0][0]']          
+                                                                                                  
+ conv2d_268 (Conv2D)         (None, None, None, 64)       16448     ['tf.concat_125[0][0]']       
+                                                                                                  
+ add_79 (Add)                (None, None, None, 64)       0         ['conv2d_268[0][0]',          
+                                                                     'add_78[0][0]']              
+                                                                                                  
+ batch_normalization_71 (Ba  (None, None, None, 64)       256       ['add_79[0][0]']              
+ tchNormalization)                                                                                
+                                                                                                  
+ add_new (Add)               (None, None, None, 64)       0         ['first_prelu[0][0]',         
+                                                                     'batch_normalization_71[0][0]
+                                                                    ']                            
+                                                                                                  
+ conv2d_269 (Conv2D)         (None, None, None, 256)      147712    ['add_new[0][0]']             
+                                                                                                  
+ lambda_23 (Lambda)          (None, None, None, 64)       0         ['conv2d_269[0][0]']          
+                                                                                                  
+ p_re_lu_52 (PReLU)          (None, None, None, 64)       64        ['lambda_23[0][0]']           
+                                                                                                  
+ conv2d_270 (Conv2D)         (None, None, None, 256)      147712    ['p_re_lu_52[0][0]']          
+                                                                                                  
+ lambda_24 (Lambda)          (None, None, None, 64)       0         ['conv2d_270[0][0]']          
+                                                                                                  
+ p_re_lu_53 (PReLU)          (None, None, None, 64)       64        ['lambda_24[0][0]']           
+                                                                                                  
+ conv2d_271 (Conv2D)         (None, None, None, 3)        15555     ['p_re_lu_53[0][0]']          
+                                                                                                  
+ lambda_25 (Lambda)          (None, None, None, 3)        0         ['conv2d_271[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 2735619 (10.44 MB)
+Trainable params: 2049923 (7.82 MB)
+Non-trainable params: 685696 (2.62 MB)
+__________________________________________________________________________________________________
+dot: graph is too large for cairo-renderer bitmaps. Scaling by 0.474368 to fit

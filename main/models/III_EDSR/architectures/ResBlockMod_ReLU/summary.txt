@@ -1,0 +1,178 @@
+Model: "EDSR_ResBlockMod_ReLU"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_7 (InputLayer)        [(None, None, None, 3)]      0         []                            
+                                                                                                  
+ rescaling_12 (Rescaling)    (None, None, None, 3)        0         ['input_7[0][0]']             
+                                                                                                  
+ conv2d_222 (Conv2D)         (None, None, None, 64)       1792      ['rescaling_12[0][0]']        
+                                                                                                  
+ conv2d_223 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_222[0][0]']          
+                                                                                                  
+ conv2d_224 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_223[0][0]']          
+                                                                                                  
+ add_102 (Add)               (None, None, None, 64)       0         ['conv2d_222[0][0]',          
+                                                                     'conv2d_224[0][0]']          
+                                                                                                  
+ re_lu_193 (ReLU)            (None, None, None, 64)       0         ['add_102[0][0]']             
+                                                                                                  
+ conv2d_225 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_193[0][0]']           
+                                                                                                  
+ conv2d_226 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_225[0][0]']          
+                                                                                                  
+ add_103 (Add)               (None, None, None, 64)       0         ['re_lu_193[0][0]',           
+                                                                     'conv2d_226[0][0]']          
+                                                                                                  
+ re_lu_195 (ReLU)            (None, None, None, 64)       0         ['add_103[0][0]']             
+                                                                                                  
+ conv2d_227 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_195[0][0]']           
+                                                                                                  
+ conv2d_228 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_227[0][0]']          
+                                                                                                  
+ add_104 (Add)               (None, None, None, 64)       0         ['re_lu_195[0][0]',           
+                                                                     'conv2d_228[0][0]']          
+                                                                                                  
+ re_lu_197 (ReLU)            (None, None, None, 64)       0         ['add_104[0][0]']             
+                                                                                                  
+ conv2d_229 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_197[0][0]']           
+                                                                                                  
+ conv2d_230 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_229[0][0]']          
+                                                                                                  
+ add_105 (Add)               (None, None, None, 64)       0         ['re_lu_197[0][0]',           
+                                                                     'conv2d_230[0][0]']          
+                                                                                                  
+ re_lu_199 (ReLU)            (None, None, None, 64)       0         ['add_105[0][0]']             
+                                                                                                  
+ conv2d_231 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_199[0][0]']           
+                                                                                                  
+ conv2d_232 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_231[0][0]']          
+                                                                                                  
+ add_106 (Add)               (None, None, None, 64)       0         ['re_lu_199[0][0]',           
+                                                                     'conv2d_232[0][0]']          
+                                                                                                  
+ re_lu_201 (ReLU)            (None, None, None, 64)       0         ['add_106[0][0]']             
+                                                                                                  
+ conv2d_233 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_201[0][0]']           
+                                                                                                  
+ conv2d_234 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_233[0][0]']          
+                                                                                                  
+ add_107 (Add)               (None, None, None, 64)       0         ['re_lu_201[0][0]',           
+                                                                     'conv2d_234[0][0]']          
+                                                                                                  
+ re_lu_203 (ReLU)            (None, None, None, 64)       0         ['add_107[0][0]']             
+                                                                                                  
+ conv2d_235 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_203[0][0]']           
+                                                                                                  
+ conv2d_236 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_235[0][0]']          
+                                                                                                  
+ add_108 (Add)               (None, None, None, 64)       0         ['re_lu_203[0][0]',           
+                                                                     'conv2d_236[0][0]']          
+                                                                                                  
+ re_lu_205 (ReLU)            (None, None, None, 64)       0         ['add_108[0][0]']             
+                                                                                                  
+ conv2d_237 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_205[0][0]']           
+                                                                                                  
+ conv2d_238 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_237[0][0]']          
+                                                                                                  
+ add_109 (Add)               (None, None, None, 64)       0         ['re_lu_205[0][0]',           
+                                                                     'conv2d_238[0][0]']          
+                                                                                                  
+ re_lu_207 (ReLU)            (None, None, None, 64)       0         ['add_109[0][0]']             
+                                                                                                  
+ conv2d_239 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_207[0][0]']           
+                                                                                                  
+ conv2d_240 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_239[0][0]']          
+                                                                                                  
+ add_110 (Add)               (None, None, None, 64)       0         ['re_lu_207[0][0]',           
+                                                                     'conv2d_240[0][0]']          
+                                                                                                  
+ re_lu_209 (ReLU)            (None, None, None, 64)       0         ['add_110[0][0]']             
+                                                                                                  
+ conv2d_241 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_209[0][0]']           
+                                                                                                  
+ conv2d_242 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_241[0][0]']          
+                                                                                                  
+ add_111 (Add)               (None, None, None, 64)       0         ['re_lu_209[0][0]',           
+                                                                     'conv2d_242[0][0]']          
+                                                                                                  
+ re_lu_211 (ReLU)            (None, None, None, 64)       0         ['add_111[0][0]']             
+                                                                                                  
+ conv2d_243 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_211[0][0]']           
+                                                                                                  
+ conv2d_244 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_243[0][0]']          
+                                                                                                  
+ add_112 (Add)               (None, None, None, 64)       0         ['re_lu_211[0][0]',           
+                                                                     'conv2d_244[0][0]']          
+                                                                                                  
+ re_lu_213 (ReLU)            (None, None, None, 64)       0         ['add_112[0][0]']             
+                                                                                                  
+ conv2d_245 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_213[0][0]']           
+                                                                                                  
+ conv2d_246 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_245[0][0]']          
+                                                                                                  
+ add_113 (Add)               (None, None, None, 64)       0         ['re_lu_213[0][0]',           
+                                                                     'conv2d_246[0][0]']          
+                                                                                                  
+ re_lu_215 (ReLU)            (None, None, None, 64)       0         ['add_113[0][0]']             
+                                                                                                  
+ conv2d_247 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_215[0][0]']           
+                                                                                                  
+ conv2d_248 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_247[0][0]']          
+                                                                                                  
+ add_114 (Add)               (None, None, None, 64)       0         ['re_lu_215[0][0]',           
+                                                                     'conv2d_248[0][0]']          
+                                                                                                  
+ re_lu_217 (ReLU)            (None, None, None, 64)       0         ['add_114[0][0]']             
+                                                                                                  
+ conv2d_249 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_217[0][0]']           
+                                                                                                  
+ conv2d_250 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_249[0][0]']          
+                                                                                                  
+ add_115 (Add)               (None, None, None, 64)       0         ['re_lu_217[0][0]',           
+                                                                     'conv2d_250[0][0]']          
+                                                                                                  
+ re_lu_219 (ReLU)            (None, None, None, 64)       0         ['add_115[0][0]']             
+                                                                                                  
+ conv2d_251 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_219[0][0]']           
+                                                                                                  
+ conv2d_252 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_251[0][0]']          
+                                                                                                  
+ add_116 (Add)               (None, None, None, 64)       0         ['re_lu_219[0][0]',           
+                                                                     'conv2d_252[0][0]']          
+                                                                                                  
+ re_lu_221 (ReLU)            (None, None, None, 64)       0         ['add_116[0][0]']             
+                                                                                                  
+ conv2d_253 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_221[0][0]']           
+                                                                                                  
+ conv2d_254 (Conv2D)         (None, None, None, 64)       36928     ['conv2d_253[0][0]']          
+                                                                                                  
+ add_117 (Add)               (None, None, None, 64)       0         ['re_lu_221[0][0]',           
+                                                                     'conv2d_254[0][0]']          
+                                                                                                  
+ re_lu_223 (ReLU)            (None, None, None, 64)       0         ['add_117[0][0]']             
+                                                                                                  
+ conv2d_255 (Conv2D)         (None, None, None, 64)       36928     ['re_lu_223[0][0]']           
+                                                                                                  
+ add_118 (Add)               (None, None, None, 64)       0         ['conv2d_222[0][0]',          
+                                                                     'conv2d_255[0][0]']          
+                                                                                                  
+ conv2d_256 (Conv2D)         (None, None, None, 256)      147712    ['add_118[0][0]']             
+                                                                                                  
+ lambda_12 (Lambda)          (None, None, None, 64)       0         ['conv2d_256[0][0]']          
+                                                                                                  
+ conv2d_257 (Conv2D)         (None, None, None, 256)      147712    ['lambda_12[0][0]']           
+                                                                                                  
+ lambda_13 (Lambda)          (None, None, None, 64)       0         ['conv2d_257[0][0]']          
+                                                                                                  
+ conv2d_258 (Conv2D)         (None, None, None, 3)        1731      ['lambda_13[0][0]']           
+                                                                                                  
+ rescaling_13 (Rescaling)    (None, None, None, 3)        0         ['conv2d_258[0][0]']          
+                                                                                                  
+==================================================================================================
+Total params: 1517571 (5.79 MB)
+Trainable params: 1517571 (5.79 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+dot: graph is too large for cairo-renderer bitmaps. Scaling by 0.891376 to fit
+
